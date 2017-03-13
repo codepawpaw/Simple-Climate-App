@@ -32,9 +32,9 @@
       <TH>Variance</TH>
     </TR>
     <tr ng-repeat="x in weathers">
-      <td>{{ x.dt | date}}</td>
+      <td>{{ x.dt | date : "yyyy-mm-dd" : "UTC"}}</td>
       <td>{{ x.temp.day }}C</td>
-      <td>{{ x.temp.max - x.temp.min }}C</td>
+      <td>{{ x.temp.max - x.temp.min | number:4}}C</td>
     </tr>
   </table>
 
