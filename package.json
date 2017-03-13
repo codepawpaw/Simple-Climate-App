@@ -1,0 +1,27 @@
+{
+  "name": "simple_climate",
+  "version": "1.0.0",
+  "description": "Simple weather api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/jonathannatanaelsiahaan/Simple-Climate-App.git"
+  },
+  "keywords": [
+    "line",
+    "robot"
+  ],
+  "author": "Jonathan",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jonathannatanaelsiahaan/Simple-Climate-App#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongoose": "^4.8.2",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2",
+    "sqlite": "^2.3.0"
+  }
+}

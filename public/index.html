@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather Apps Example By Jonathan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+</head>
+<body ng-app="app" ng-controller="appCtrl">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <script src="js/controllers/appCtrl.js"></script>
+  <script src="js/services/appService.js"></script>
+  <script src="js/app.js"></script>
+  
+  <select ng-model="selectedCity">
+  <option ng-repeat="x in city" value="{{x.name}}">{{x.name}}</option>
+  </select>
+
+  <button ng-click="searchWeather()">
+  Search
+  </button>
+  <BR><BR>
+  <table border = '1' width = '1000'>
+    <TR>
+      <TH>{{selectedCity}}</TH>
+      <TH>Temperature</TH>
+      <TH>Variance</TH>
+    </TR>
+    <tr ng-repeat="x in weathers">
+      <td>{{ x.dt | date}}</td>
+      <td>{{ x.temp.day }}C</td>
+      <td>{{ x.temp.max - x.temp.min }}C</td>
+    </tr>
+  </table>
+
+
+
+
+</body>
+ 
+
+</div>
+
+</html>
